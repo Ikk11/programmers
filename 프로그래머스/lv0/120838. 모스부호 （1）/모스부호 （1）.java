@@ -8,18 +8,14 @@ class Solution {
                             {"--..", "z"}};
         
         String[] arr = letter.split(" ");
+        String answer = "";
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < morse.length; j++) {
                 if (arr[i].equals(morse[j][0])) {
-                    arr[i] = morse[j][1];
+                    answer += morse[j][1];
                     break;
                 }
             }
-        }
-        
-        String answer = "";
-        for (int i = 0; i < arr.length; i++) {
-            answer += arr[i];
         }
         return answer;
     }
