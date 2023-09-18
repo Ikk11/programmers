@@ -1,18 +1,19 @@
 class Solution {
     public int solution(int n) {
-        int x = 0;
+        int answer = 0;
         int y = 0;
+        
         while (true) {
-            x++;
+            answer++;
             y++;
-            while (x%3==0 || (x+"").contains("3")) {
-                x++;
+            while (answer%3==0 || (answer+"").contains("3")) {
+                answer++;
             }
             if (y == n) {
                 break;
             }
         }
-        int answer = x;
+        
         return answer;
     }
 }
