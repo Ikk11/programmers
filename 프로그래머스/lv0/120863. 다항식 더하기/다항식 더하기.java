@@ -5,10 +5,11 @@ class Solution {
         int x = 0;
         int y = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i].indexOf("x") == 0) {
+            int index = arr[i].indexOf("x");
+            if (index == 0) {
                 x++;
-            } else if (arr[i].indexOf("x") != -1) {
-                x += Integer.parseInt(arr[i].substring(0,arr[i].indexOf("x")));
+            } else if (index != -1) {
+                x += Integer.parseInt(arr[i].substring(0,index));
             } else {
                 y += Integer.parseInt(arr[i]);
             }
