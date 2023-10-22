@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 class Solution {
-    int gsd(int a, int b) {
+    public int gsd(int a, int b) {
         if (a%b == 0) {
             return b;
         }
         return (gsd(b, a%b));
     }
-    int solution(int a, int b) {
+    public int solution(int a, int b) {
         int gsd_b = b/gsd(a, b);
         while (gsd_b%2 == 0) {
             gsd_b /= 2;
